@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Create comment - add step content
         run: |
@@ -53,10 +53,10 @@ jobs:
     name: Disable this workflow
     needs: [find_exercise, post_review_content]
     runs-on: ubuntu-latest
-
+<h2 hidden>Game over! Want to play again?! Just click refresh. 🧑‍🚀!</h2>
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Disable current workflow
         run: gh workflow disable "${{github.workflow}}"
